@@ -62,8 +62,8 @@ html {
   top: 3px;
   text-align: center;
   text-decoration: none;
-  color: #2194E0;
-  border: 2px solid #2194E0;
+  color: lightgrey;
+  border: 2px solid lightgrey;
   font-size: 24px;
   display: inline-block;
   border-radius: 0.3em;
@@ -86,9 +86,9 @@ html {
   transition: none;
 }
 .button:hover {
-  background-color: #2194E0;
+  background-color: lightgrey;
   color: #fff;
-  border-bottom: 4px solid #1977b5;
+  border-bottom: 4px solid lightgrey;
 }
 .button:hover:before {
   -webkit-transform: skewX(-45deg) translateX(13.5em);
@@ -623,4 +623,31 @@ nav {
   .right .site__description {
     column-count: 2; } }
 
-/*# sourceMappingURL=dropcast.css.map */
+.herego {
+  display: flex;
+  /*font-family: sans-serif;*/
+  line-height: 2.4;
+  width:85%;
+  position: relative;
+  left: 10%;
+}
+aside,
+main {
+  padding: 2rem;
+  height: 100vh;
+  overflow: scroll;
+}
+aside {
+  background-color: #3d3d3d;
+  color: #efefef;
+  width: 20rem;
+  flex: 4;
+  min-width: 20rem;
+}
+main {
+  color: black;
+  font-size: 1.2em;
+  background-color: white;
+  flex: 4;
+}
+
