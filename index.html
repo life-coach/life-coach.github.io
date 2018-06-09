@@ -10,22 +10,24 @@
       <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Rufina:400,700|Source+Sans+Pro:200,300,400,600,700" rel="stylesheet">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     </head>
     <body>
       <div id="site__bg"></div>
       <div class="main">
         <nav>
           <div class="logo nav__logo">
-            <a href="index.html"><img src="assets/images/logo.svg" alt="logo"/></a>
+            <a href="index.html"><img class="logo" src="assets/images/half_logo.png" alt="logo"/></a>
           </div>
-          <ul class="nav__list">
+         <!--  <ul class="nav__list">
             <li class="nav__item"><a href="#">Episodes</a></li>
-          </ul>
-          <ul class="nav__social">
+          </ul> -->
+<!--           <ul class="nav__social">
             <li><a href="#" class="nav_social__item"><i class="fab fa-google-play"></i></a></li>
             <li><a href="#" class="nav_social__item"><i class="fab fa-itunes-note"></i></a></li>
             <li><a href="#" class="nav_social__item"><i class="fas fa-rss-square"></i></a></li>
-          </ul>
+          </ul> -->
         </nav>
         <section class="site">
           <h1 class="site__title site__title--separator">The Plaza</h1>
@@ -73,13 +75,41 @@
             </div>
           </article>
         </section>
+
+  <!-- <button class="button"><a  href="#exampleInputEmail1">Sign up</a></button> -->
       </div>
-      <footer>
+
+  </div>
+<div style="text-align:center;margin-bottom:100px;">
+    <form role="form" method="post">
+      <div class="form-group">
+      <div class="input-group">
+      <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email to get exclusive access!">
+      <span class="input-group-btn">
+      <button type="submit" class="button">Subscribe</button>
+      </span>
+      </div>
+      </div>
+    </form>
+      <!-- <footer>
         <p class="footer__content">Want to start coaching? Contact us today!</p>
         <div class="logo footer__logo">
-          <!-- <a href="https://tympanus.net/codrops/"><img src="assets/images/logo-white.svg" alt="logo"/></a> -->
         </div>
-      </footer>
+      </footer> -->
       <script src="assets/js/dropcast.js"></script>
+      <script type="text/javascript">
+      $(document).ready(function(){
+          $(".input-group-btn").click(function(){
+            $.post( "http://lifecoach.pythonanywhere.com/", { email: $("#exampleInputEmail1").val() }, dataType="json" );
+            // $.ajax({
+            //   url: "http://127.0.0.1:5000/",
+            //   method: "post",
+            //   data: $("#exampleInputEmail1").val()
+            // })
+          })
+      })
+      
+
+      </script>
     </body>
 </html>
